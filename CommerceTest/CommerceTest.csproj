@@ -51,6 +51,7 @@
     <Compile Include="CartTotalShouldReturn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculateAreaShouldReturn.cs" />
+    <Compile Include="OnlineOrderCheckoutShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

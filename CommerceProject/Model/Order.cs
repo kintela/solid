@@ -26,7 +26,7 @@ namespace CommerceProject.Model
         private readonly INotificationService _notificationService;
         private readonly PaymentDetails _paymentDetails;
         private readonly IPaymentProcessor _paymentProcessor;
-        private readonly IReservationService _reservationService;
+        private readonly IReservationService1 _reservationService;
 
         public OnlineOrder(Cart cart, PaymentDetails paymentDetails)
             : base(cart)
@@ -79,12 +79,12 @@ namespace CommerceProject.Model
 
     #region PaymentProcessor
 
-    public interface IPaymentProcessor
+    public interface IPaymentProcessor1
     {
         void ProcessCreditCard(PaymentDetails paymentDetails, decimal amount);
     }
 
-    internal class PaymentProcessor : IPaymentProcessor
+    internal class PaymentProcessor : IPaymentProcessor1
     {
         public void ProcessCreditCard(PaymentDetails paymentDetails, decimal amount)
         {
@@ -96,12 +96,12 @@ namespace CommerceProject.Model
 
     #region ReservationService
 
-    public interface IReservationService
+    public interface IReservationService1
     {
         void ReserveInventory(IEnumerable<OrderItem> items);
     }
 
-    public class ReservationService : IReservationService
+    public class ReservationService : IReservationService1
     {
         public void ReserveInventory(IEnumerable<OrderItem> items)
         {
