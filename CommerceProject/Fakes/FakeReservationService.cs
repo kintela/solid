@@ -6,14 +6,13 @@ using CommerceProject.Model;
 
 namespace CommerceProject.Fakes
 {
-    public class FakePaymentProcessor:IPaymentProcessor
+    public class FakeReservationService:IReservationService
     {
-        public decimal AmountPassed = 0;
         public bool WasCalled = false;
-        public void ProcessCreditCard(PaymentDetails paymentDetails, decimal amount)
+        public void ReserveInventory(IEnumerable<OrderItem> items)
         {
             WasCalled = true;
-            AmountPassed = amount;
         }
+
     }
 }

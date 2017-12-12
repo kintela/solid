@@ -25,7 +25,7 @@ namespace CommerceProject.Model
     {
         private readonly INotificationService _notificationService;
         private readonly PaymentDetails _paymentDetails;
-        private readonly IPaymentProcessor _paymentProcessor;
+        private readonly IPaymentProcessor1 _paymentProcessor;
         private readonly IReservationService1 _reservationService;
 
         public OnlineOrder(Cart cart, PaymentDetails paymentDetails)
@@ -52,7 +52,7 @@ namespace CommerceProject.Model
     public class PoSCreditOrder : Order
     {
         private readonly PaymentDetails _paymentDetails;
-        private readonly IPaymentProcessor _paymentProcessor;
+        private readonly IPaymentProcessor1 _paymentProcessor;
 
         public PoSCreditOrder(Cart cart, PaymentDetails paymentDetails)
             : base(cart)
